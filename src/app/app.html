@@ -1,0 +1,135 @@
+<!-- Angular SPA Layout - Professional Accounting Software Firm -->
+<div class="company-theme">
+  <header class="app-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <!-- Brand -->
+        <a [routerLink]="['/']" class="navbar-brand d-flex align-items-center">
+          <div class="brand-logo">
+            <span class="brand-text">EnRator</span>
+          </div>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" (click)="toggleMobileMenu()"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation -->
+        <div class="navbar-collapse" [class.show]="isMobileMenuOpen()" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a [routerLink]="['/home']" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+                <i class="fa fa-home me-2"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/about']" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+                <i class="fa fa-building me-2"></i>Our Company
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/vision']" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+                <i class="fa fa-eye me-2"></i>Vision & Mission
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-tags me-2"></i>Pricing
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-envelope me-2"></i>Contact
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-star me-2"></i>Why We
+              </a>
+            </li>
+            <li class="nav-item ms-3">
+              <a [routerLink]="['/trial']" routerLinkActive="active" class="btn btn-cta-primary">
+                <i class="fa fa-rocket me-2"></i>Start Free Trial
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <div class="content-main" id="content-main">
+      <!-- Angular Router Outlet for Component Views -->
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="footer-section">
+            <h5>EnRator</h5>
+            <p class="mb-3">Professional accounting software solutions for construction, institutions, hospitality, and fleet management industries.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <div class="footer-section">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a [routerLink]="['/home']">Home</a></li>
+              <li><a [routerLink]="['/about']">About Us</a></li>
+              <li><a [routerLink]="['/vision']">Vision & Mission</a></li>
+              <li><a [routerLink]="['/whywe']">Why Choose Us</a></li>
+              <li><a [routerLink]="['/pricing-info']">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Industries Served -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="footer-section">
+            <h5>Industries Served</h5>
+            <ul>
+              <li><a href="#">Construction</a></li>
+              <li><a href="#">Institutions</a></li>
+              <li><a href="#">Hospitality</a></li>
+              <li><a href="#">Fleet Management</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="footer-section">
+            <h5>Contact Info</h5>
+            <ul>
+              <li><i class="fa fa-envelope me-2"></i> info@enrator.com</li>
+              <!--<li><i class="fa fa-phone me-2"></i> +1-855-435-8226</li>-->
+              <li><i class="fa fa-map-marker-alt me-2"></i> New Delhi, India</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 EnRator. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>

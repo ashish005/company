@@ -1,0 +1,10 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="200" fill="#0A192F"/>
+  <!-- EnRator Text -->
+  <text x="50%" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="85" fill="#FFFFFF">EnRator</text>
+  <!-- Tagline -->
+  <text x="50%" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" letter-spacing="3" fill="#C5A059">ENGINEERING INTELLIGENT TRANSFORMATION</text>
+  <!-- Accent Line -->
+  <line x1="120" y1="120" x2="480" y2="120" stroke="#C5A059" stroke-width="2"/>
+</svg>

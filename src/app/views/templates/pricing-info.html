@@ -1,0 +1,267 @@
+<div class="pricing-info-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-content">
+                        <div class="badge">
+                            <i class="fa fa-tags me-2"></i>Pricing Plans
+                        </div>
+                        <h1 class="hero-title">Choose Your Perfect Plan</h1>
+                        <p class="hero-subtitle">Flexible pricing options designed to grow with your business. Start free and scale as you need.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-warning" [routerLink]="['/trial']">
+                                <i class="fa fa-rocket me-2"></i>Start Free Trial
+                            </button>
+                            <button class="btn btn-outline-light" [routerLink]="['/contact']">
+                                <i class="fa fa-phone me-2"></i>Schedule Demo
+                            </button>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="hero-features">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="feature-icon">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <span class="fw-medium">No Hidden Fees</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="feature-icon">
+                                            <i class="fa fa-sync"></i>
+                                        </div>
+                                        <span class="fw-medium">Cancel Anytime</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="feature-icon">
+                                            <i class="fa fa-headset"></i>
+                                        </div>
+                                        <span class="fw-medium">24/7 Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <img src="assets/images/pricing/pricing-plans.jpg"
+                             alt="Pricing Plans Sketch"
+                             class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Selection Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3 text-gradient">Choose Your Software</h2>
+                <p class="lead text-muted">Select the software solution that fits your needs</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Software Tabs -->
+                    <div class="feature-card">
+                        <div class="p-4">
+                            <div class="nav nav-pills d-flex flex-wrap justify-content-center gap-2" role="tablist">
+                                <ng-template ngFor let-software [ngForOf]="lookups.softwares" let-i="index">
+                                    <button class="nav-link"
+                                            [class.active]="activeSoftware?.code == software.code"
+                                            [class.bg-primary]="activeSoftware?.code == software.code"
+                                            [class.text-white]="activeSoftware?.code == software.code"
+                                            (click)="showBySoftware(software)"
+                                            type="button">
+                                        <i class="fa fa-box me-2"></i>{{software.code}}
+                                    </button>
+                                </ng-template>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Comparison Table -->
+                    <div class="feature-card">
+                        <div class="p-4">
+                            <div class="text-center mb-4">
+                                <h3 class="display-6 fw-bold text-gradient">Plan Comparison Chart</h3>
+                                <p class="text-muted">Compare features across different license types</p>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="feature-icon">
+                                                        <i class="fa fa-list"></i>
+                                                    </div>
+                                                    <span class="fw-bold">Features</span>
+                                                </div>
+                                            </th>
+                                            <ng-template ngFor let-licenseType [ngForOf]="software.licenseTypes" let-i="index">
+                                                <th class="text-center">
+                                                    <div class="feature-icon">
+                                                        <i class="fa fa-cube"></i>
+                                                    </div>
+                                                    <div class="fw-bold">
+                                                        <h6 class="text-uppercase">{{licenseType.name}}</h6>
+                                                    </div>
+                                                </th>
+                                            </ng-template>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <ng-template ngFor let-row [ngForOf]="software.licensingFeatures" let-i="index">
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="feature-icon">
+                                                            <i class="fa fa-check"></i>
+                                                        </div>
+                                                        <span class="fw-bold">{{ row.name }}</span>
+                                                    </div>
+                                                </td>
+                                                <ng-template ngFor let-feature [ngForOf]="row?.softwareLicenseFeatures" let-i="index">
+                                                    <td class="text-center">
+                                                        <div class="feature-icon">
+                                                            <i class="fa fa-star icon-success"></i>
+                                                        </div>
+                                                        <span class="badge">{{ feature.value }}</span>
+                                                    </td>
+                                                </ng-template>
+                                            </tr>
+                                        </ng-template>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- No Features Message -->
+                            <div class="text-center py-5" *ngIf="!(software.licensingFeatures && software.licensingFeatures.length)">
+                                <div class="feature-card">
+                                    <div class="p-5">
+                                        <div class="feature-icon">
+                                            <i class="fa fa-clock fa-2x"></i>
+                                        </div>
+                                        <h4 class="feature-title">Plan Under Review</h4>
+                                        <p class="feature-description">We're currently updating our pricing plans. Please check back soon or contact us for more information.</p>
+                                        <button class="btn btn-primary" [routerLink]="['/contact']">
+                                            <i class="fa fa-envelope me-2"></i>Contact Sales
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-padding bg-light" *ngIf="software.licensingFeatures && software.licensingFeatures.length">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-gradient">Why Choose Our Plans?</h2>
+                <p class="lead text-muted">Flexible pricing that grows with your business</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card text-center h-100">
+                        <div class="feature-icon">
+                            <i class="fa fa-dollar-sign fa-2x"></i>
+                        </div>
+                        <h4 class="feature-title">Transparent Pricing</h4>
+                        <p class="feature-description">No hidden fees or surprise charges. What you see is what you pay.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card text-center h-100">
+                        <div class="feature-icon icon-success">
+                            <i class="fa fa-arrows-alt fa-2x"></i>
+                        </div>
+                        <h4 class="feature-title">Scalable Solutions</h4>
+                        <p class="feature-description">Start small and scale up as your business grows and needs evolve.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card text-center h-100">
+                        <div class="feature-icon icon-accent">
+                            <i class="fa fa-headset fa-2x"></i>
+                        </div>
+                        <h4 class="feature-title">Premium Support</h4>
+                        <p class="feature-description">Get expert help when you need it with our dedicated support team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3 text-gradient">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Common questions about our pricing</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="faq-card">
+                        <h5 class="fw-bold mb-3">Can I change plans anytime?</h5>
+                        <p class="text-muted">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="faq-card">
+                        <h5 class="fw-bold mb-3">Is there a free trial?</h5>
+                        <p class="text-muted">Yes! All plans come with a 14-day free Trial. No credit card required to start.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="faq-card">
+                        <h5 class="fw-bold mb-3">What payment methods do you accept?</h5>
+                        <p class="text-muted">We accept all major credit cards, PayPal, and bank transfers for enterprise plans.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="faq-card">
+                        <h5 class="fw-bold mb-3">Do you offer discounts?</h5>
+                        <p class="text-muted">Yes, we offer discounts for annual billing and non-profit organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section bg-primary text-white py-5">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold mb-4">Ready to Get Started?</h2>
+                <p class="lead mb-4">Choose the perfect plan for your business needs</p>
+                <div class="cta-buttons d-flex gap-3 justify-content-center flex-wrap">
+                    <button class="btn btn-warning btn-lg" [routerLink]="['/trial']">
+                        <i class="fa fa-rocket me-2"></i>Start Free Trial
+                    </button>
+                    <button class="btn btn-outline-light btn-lg" [routerLink]="['/contact']">
+                        <i class="fa fa-phone me-2"></i>Schedule Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
