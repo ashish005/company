@@ -1,4 +1,4 @@
-<!-- Angular SPA Layout - Professional Accounting Software Firm -->
+<!-- Angular SPA Layout - Software Startup & Consulting Firm -->
 <div class="company-theme">
   <header class="app-header">
     <div class="container">
@@ -22,40 +22,40 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a [routerLink]="['/home']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
-                <i class="fa fa-home me-2"></i>Home
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" aria-label="Home page">
+                <i class="fa fa-home me-2" aria-hidden="true"></i>Home
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/about']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
-                <i class="fa fa-building me-2"></i>Our Company
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" aria-label="About our company">
+                <i class="fa fa-building me-2" aria-hidden="true"></i>Our Company
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/vision']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
-                <i class="fa fa-eye me-2"></i>Vision & Mission
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" aria-label="Our vision and mission">
+                <i class="fa fa-eye me-2" aria-hidden="true"></i>Vision & Mission
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link">
-                <i class="fa fa-tags me-2"></i>Pricing
+              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link" aria-label="Pricing information">
+                <i class="fa fa-tags me-2" aria-hidden="true"></i>Pricing
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link">
-                <i class="fa fa-envelope me-2"></i>Contact
+              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link" aria-label="Contact us">
+                <i class="fa fa-envelope me-2" aria-hidden="true"></i>Contact
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link">
-                <i class="fa fa-star me-2"></i>Why We
+              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link" aria-label="Why choose us">
+                <i class="fa fa-star me-2" aria-hidden="true"></i>Why We
               </a>
             </li>
             <li class="nav-item ms-3">
-              <a [routerLink]="['/trial']" routerLinkActive="active" class="btn btn-cta-primary">
-                <i class="fa fa-rocket me-2"></i>Start Free Trial
+              <a [routerLink]="['/trial']" routerLinkActive="active" class="btn btn-cta-primary" aria-label="Start free trial">
+                <i class="fa fa-rocket me-2" aria-hidden="true"></i>Start Free Trial
               </a>
             </li>
           </ul>
@@ -79,7 +79,7 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="footer-section">
             <h5>EnRator</h5>
-            <p class="mb-3">Professional accounting software solutions for construction, institutions, hospitality, and fleet management industries.</p>
+            <p class="mb-3">Innovative software startup and consulting firm delivering cutting-edge digital solutions, strategic technology partnerships, and expert IT consulting services to transform businesses worldwide.</p>
             <div class="social-links">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
@@ -94,11 +94,11 @@
           <div class="footer-section">
             <h5>Quick Links</h5>
             <ul>
-              <li><a [routerLink]="['/home']">Home</a></li>
-              <li><a [routerLink]="['/about']">About Us</a></li>
-              <li><a [routerLink]="['/vision']">Vision & Mission</a></li>
-              <li><a [routerLink]="['/whywe']">Why Choose Us</a></li>
-              <li><a [routerLink]="['/pricing-info']">Pricing</a></li>
+              <li><a [routerLink]="['/home']" aria-label="Navigate to home page">Home</a></li>
+              <li><a [routerLink]="['/about']" aria-label="Navigate to about us page">About Us</a></li>
+              <li><a [routerLink]="['/vision']" aria-label="Navigate to vision and mission page">Vision & Mission</a></li>
+              <li><a [routerLink]="['/whywe']" aria-label="Navigate to why choose us page">Why Choose Us</a></li>
+              <li><a [routerLink]="['/pricing-info']" aria-label="Navigate to pricing information page">Pricing</a></li>
             </ul>
           </div>
         </div>
@@ -106,12 +106,12 @@
         <!-- Industries Served -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="footer-section">
-            <h5>Industries Served</h5>
+            <h5>Services</h5>
             <ul>
-              <li><a href="#">Construction</a></li>
-              <li><a href="#">Institutions</a></li>
-              <li><a href="#">Hospitality</a></li>
-              <li><a href="#">Fleet Management</a></li>
+              <li><a href="#" aria-label="Software Development services">Software Development</a></li>
+              <li><a href="#" aria-label="IT Consulting services">IT Consulting</a></li>
+              <li><a href="#" aria-label="Digital Transformation services">Digital Transformation</a></li>
+              <li><a href="#" aria-label="Cloud Solutions services">Cloud Solutions</a></li>
             </ul>
           </div>
         </div>
@@ -121,9 +121,9 @@
           <div class="footer-section">
             <h5>Contact Info</h5>
             <ul>
-              <li><i class="fa fa-envelope me-2"></i> info@enrator.com</li>
+              <li><i class="fa fa-envelope me-2" aria-hidden="true"></i><a href="mailto:info@enrator.com" aria-label="Send email to info@enrator.com">info@enrator.com</a></li>
               <!--<li><i class="fa fa-phone me-2"></i> +1-855-435-8226</li>-->
-              <li><i class="fa fa-map-marker-alt me-2"></i> New Delhi, India</li>
+              <li><i class="fa fa-map-marker-alt me-2" aria-hidden="true"></i> New Delhi, India</li>
             </ul>
           </div>
         </div>
