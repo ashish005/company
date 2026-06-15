@@ -1,16 +1,21 @@
 <div class="trial-page">
   <!-- Hero Section -->
-  <section class="hero-section py-5">
-    <div class="container">
+  <section class="hero-section py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="container position-relative" style="z-index: 2;">
       <div class="row align-items-center">
         <div class="col-lg-8 mx-auto text-center">
-          <div class="hero-content">
-            <div class="badge mb-3">
+          <div class="hero-content text-white">
+            <div class="badge bg-white bg-opacity-20 text-white mb-4 px-4 py-2 rounded-pill border border-white border-opacity-30">
               <i class="fa fa-rocket me-2"></i>Free Trial
             </div>
-            <h1 class="hero-title">Start Your 14-Day Free Trial</h1>
-            <p class="hero-subtitle mb-4">Experience the full power of our software development and consulting services with
+            <h1 class="hero-title fw-bold mb-4" style="font-size: 3rem;">Start Your 14-Day Free Trial</h1>
+            <p class="hero-subtitle mb-4 fs-5" style="opacity: 0.9;">Experience the full power of our software development and consulting services with
               no credit card required. Get started in minutes.</p>
+            <div class="mt-4">
+              <a [routerLink]="['/trial']" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold text-primary">
+                Get Started Now <i class="fa fa-arrow-right ms-2"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -18,32 +23,32 @@
   </section>
 
   <!-- Registration Form -->
-  <section class="section-padding py-5" *ngIf="!successResp?.isSuccess">
+  <section class="section-padding py-5" style="background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);" *ngIf="!successResp?.isSuccess">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="contact-form-card p-5 bg-white rounded-4 shadow-lg">
+        <div class="col-lg-8">
+          <div class="contact-form-card p-4 p-md-5 bg-white rounded-4 shadow-lg border-0" style="border-top: 4px solid #667eea;">
             <form class="contact-form" [formGroup]="customForm">
               <!-- Form Header -->
               <div class="form-header text-center mb-5">
-                <div class="badge mb-3">
+                <div class="badge mb-3 px-4 py-2 rounded-pill" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
                   <i class="fa fa-rocket me-2"></i>Start Your Free Trial
                 </div>
-                <h3 class="form-title fw-bold mb-2">Complete Your Registration</h3>
+                <h3 class="form-title fw-bold mb-2" style="color: #333;">Complete Your Registration</h3>
                 <p class="form-subtitle text-muted">Fill in details below to create your account</p>
               </div>
 
               <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-12">
                   <!-- Personal Information Section -->
-                  <div class="form-section">
+                  <div class="form-section mb-4">
                     <div class="section-header mb-4">
                       <div class="d-flex align-items-center mb-3">
-                        <div class="section-icon me-3 bg-primary bg-opacity-10 rounded-circle p-2">
-                          <i class="fa fa-user text-primary"></i>
+                        <div class="section-icon me-3 rounded-circle p-2" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                          <i class="fa fa-user text-white"></i>
                         </div>
                         <div>
-                          <h5 class="section-title fw-bold mb-1">Personal Information</h5>
+                          <h5 class="section-title fw-bold mb-1" style="color: #333;">Personal Information</h5>
                           <p class="section-subtitle text-muted small">Your contact details</p>
                         </div>
                       </div>
@@ -52,17 +57,17 @@
                     <div class="row g-3">
                       <div class="col-12">
                         <div class="md-form-group float-label">
-                          <input type="text" formControlName="contactPersonName" class="md-input"
+                          <input type="text" formControlName="contactPersonName" class="md-input form-control"
                                  [ngClass]="{ 'is-invalid': submitted && f['contactPersonName'].errors }"
-                                 placeholder="First and last name">
+                                 placeholder="First and last name" style="border: 1px solid #dee2e6; padding: 0.75rem; border-radius: 0.5rem;">
                           <label>Full Name</label>
                         </div>
                       </div>
                       <div class="col-12">
                         <div class="md-form-group float-label">
-                          <input type="email" formControlName="contactPersonEmail" class="md-input"
+                          <input type="email" formControlName="contactPersonEmail" class="md-input form-control"
                                  [ngClass]="{ 'is-invalid': submitted && f['contactPersonEmail'].errors }"
-                                 placeholder="your.email@company.com">
+                                 placeholder="your.email@company.com" style="border: 1px solid #dee2e6; padding: 0.75rem; border-radius: 0.5rem;">
                           <label>Work Email</label>
                           <div *ngIf="submitted && f['contactPersonEmail'].errors" class="text-danger small mt-1">
                             <div *ngIf="f['contactPersonEmail'].errors['required']">Email is required</div>
@@ -72,9 +77,9 @@
                       </div>
                       <div class="col-12">
                         <div class="md-form-group float-label">
-                          <input type="tel" formControlName="contactPersonMobile" class="md-input"
+                          <input type="tel" formControlName="contactPersonMobile" class="md-input form-control"
                                  [ngClass]="{ 'is-invalid': submitted && f['contactPersonMobile'].errors }"
-                                 placeholder="+1 (555) 123-4567">
+                                 placeholder="+1 (555) 123-4567" style="border: 1px solid #dee2e6; padding: 0.75rem; border-radius: 0.5rem;">
                           <label>Mobile Number</label>
                           <div *ngIf="submitted && f['contactPersonMobile'].errors" class="text-danger small mt-1">
                             <div *ngIf="f['contactPersonMobile'].errors['required']">Mobile number is required</div>
@@ -85,8 +90,8 @@
                       </div>
                       <div class="col-12">
                         <div class="md-form-group float-label p-0">
-                          <label class="text-xs text-muted m-0">Software</label>
-                          <select class="md-input" formControlName="softwareCode">
+                          <label class="text-xs text-muted m-0 mb-1">Software</label>
+                          <select class="md-input form-select" formControlName="softwareCode" style="border: 1px solid #dee2e6; padding: 0.75rem; border-radius: 0.5rem;">
                             <option *ngFor="let entity of lookup.softwares;"
                                     [ngValue]="entity.code">{{entity.name}}</option>
                           </select>
@@ -94,8 +99,8 @@
                       </div>
                       <div class="col-12">
                         <div class="md-form-group float-label p-0">
-                          <label class="text-xs text-muted m-0">Business Type</label>
-                          <select class="md-input" formControlName="businessTypeCode">
+                          <label class="text-xs text-muted m-0 mb-1">Business Type</label>
+                          <select class="md-input form-select" formControlName="businessTypeCode" style="border: 1px solid #dee2e6; padding: 0.75rem; border-radius: 0.5rem;">
                             <option value="">Select business type</option>
                             <option *ngFor="let entity of businessTypes;"
                                     [ngValue]="entity.code">{{entity.name}}</option>
@@ -113,10 +118,10 @@
                   <div class="col-12">
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="terms" (change)="termsAccepted = $event.target.checked" required>
-                        <label class="form-check-label" for="terms">
-                          I agree to the <a href="#" class="link-primary">Terms of Service</a> and <a href="#"
-                                                                                                      class="link-primary">Privacy
+                        <input class="form-check-input" type="checkbox" id="terms" (change)="termsAccepted = $event.target.checked" required style="width: 1.2em; height: 1.2em;">
+                        <label class="form-check-label" for="terms" style="font-size: 0.95rem;">
+                          I agree to the <a href="#" class="link-primary" style="color: #667eea; text-decoration: none; font-weight: 500;">Terms of Service</a> and <a href="#"
+                                                                                                      class="link-primary" style="color: #667eea; text-decoration: none; font-weight: 500;">Privacy
                           Policy</a>
                         </label>
                       </div>
@@ -124,9 +129,9 @@
                   </div>
                 </div>
 
-                <div class="alert alert-info mt-4">
-                  <i class="fa fa-info-circle me-2"></i>
-                  <strong>Important:</strong> All account communications and trial updates will be sent to the provided
+                <div class="alert alert-info mt-4" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border: 1px solid #667eea30; border-radius: 0.5rem;">
+                  <i class="fa fa-info-circle me-2" style="color: #667eea;"></i>
+                  <strong style="color: #333;">Important:</strong> All account communications and trial updates will be sent to the provided
                   contact details. Please ensure information is accurate.
                 </div>
               </div>
@@ -134,8 +139,9 @@
               <!-- Submit Button -->
               <div class="row mt-4">
                 <div class="col-12 text-center">
-                  <button class="btn btn-primary btn-lg w-100 px-5 py-3" (click)="onSubmit(customForm)"
-                          [disabled]="!customForm.valid || !termsAccepted || submitted">
+                  <button class="btn btn-lg w-100 px-5 py-3 rounded-pill fw-bold text-white" (click)="onSubmit(customForm)"
+                          [disabled]="!customForm.valid || !termsAccepted || submitted"
+                          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
                     <i *ngIf="submitted" class='fa fa-circle-o-notch fa-spin me-2'></i>
                     {{ submitted ? 'Creating Your Account...' : 'Start Free Trial Now' }}
                   </button>
@@ -210,54 +216,54 @@
   </section>
 
   <!-- Benefits Section -->
-  <section class="section-padding py-5 bg-light" *ngIf="!successResp?.isSuccess">
+  <section class="section-padding py-5" style="background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);" *ngIf="!successResp?.isSuccess">
     <div class="container">
       <div class="text-center mb-5">
-        <div class="badge mb-3">
+        <div class="badge mb-3 px-4 py-2 rounded-pill" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
           <i class="fa fa-star me-2"></i>Benefits
         </div>
-        <h2 class="display-5 fw-bold text-gradient mb-3">Why Choose EnRator?</h2>
+        <h2 class="display-5 fw-bold mb-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Why Choose EnRator?</h2>
         <p class="lead text-muted mb-4">Everything you need to experience our software development and consulting services,
           included in your trial</p>
       </div>
 
       <div class="row g-4">
         <div class="col-lg-3 col-md-6">
-          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0">
-            <div class="feature-icon mx-auto mb-3 bg-primary bg-opacity-10 rounded-circle p-3">
-              <i class="fa fa-credit-card fa-2x text-primary"></i>
+          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0" style="border-top: 3px solid #667eea;">
+            <div class="feature-icon mx-auto mb-3 rounded-circle p-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-credit-card fa-2x text-white"></i>
             </div>
-            <h5 class="feature-title fw-bold mb-2">No Credit Card</h5>
+            <h5 class="feature-title fw-bold mb-2" style="color: #333;">No Credit Card</h5>
             <p class="feature-description text-muted">Start your software trial without any payment information</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0">
-            <div class="feature-icon mx-auto mb-3 bg-success bg-opacity-10 rounded-circle p-3">
-              <i class="fa fa-clock fa-2x text-success"></i>
+          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0" style="border-top: 3px solid #28a745;">
+            <div class="feature-icon mx-auto mb-3 rounded-circle p-3" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-clock fa-2x text-white"></i>
             </div>
-            <h5 class="feature-title fw-bold mb-2">14 Days Free</h5>
+            <h5 class="feature-title fw-bold mb-2" style="color: #333;">14 Days Free</h5>
             <p class="feature-description text-muted">Full access to software development features for two weeks</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0">
-            <div class="feature-icon mx-auto mb-3 bg-info bg-opacity-10 rounded-circle p-3">
-              <i class="fa fa-headset fa-2x text-info"></i>
+          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0" style="border-top: 3px solid #17a2b8;">
+            <div class="feature-icon mx-auto mb-3 rounded-circle p-3" style="background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-headset fa-2x text-white"></i>
             </div>
-            <h5 class="feature-title fw-bold mb-2">Free Support</h5>
+            <h5 class="feature-title fw-bold mb-2" style="color: #333;">Free Support</h5>
             <p class="feature-description text-muted">Get technical consulting help during your trial period</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0">
-            <div class="feature-icon mx-auto mb-3 bg-warning bg-opacity-10 rounded-circle p-3">
-              <i class="fa fa-ban fa-2x text-warning"></i>
+          <div class="feature-card text-center h-100 p-4 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0" style="border-top: 3px solid #ffc107;">
+            <div class="feature-icon mx-auto mb-3 rounded-circle p-3" style="background: linear-gradient(135deg, #ffc107 0%, #ffca2c 100%); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+              <i class="fa fa-ban fa-2x text-white"></i>
             </div>
-            <h5 class="feature-title fw-bold mb-2">No Commitment</h5>
+            <h5 class="feature-title fw-bold mb-2" style="color: #333;">No Commitment</h5>
             <p class="feature-description text-muted">Cancel anytime, no strings attached</p>
           </div>
         </div>

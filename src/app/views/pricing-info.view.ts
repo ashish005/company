@@ -20,7 +20,7 @@ export class PricingInfoView implements OnInit {
         this.activeSoftware = this.lookups.softwares[0];
     }
 
-    ngOnInit(){ this.fetchSectorDetails(); }
+    ngOnInit(){  }//this.fetchSectorDetails();
 
     showBySoftware(software: any){
         this.activeSoftware = software;
