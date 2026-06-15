@@ -18,43 +18,43 @@
         </button>
 
         <!-- Navigation -->
-        <div class="navbar-collapse" [class.show]="isMobileMenuOpen()" id="navbarNav">
+        <div class="navbar-collapse collapse" [class.show]="isMobileMenuOpen" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a [routerLink]="['/home']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" aria-label="Home page">
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" (click)="closeMobileMenu()" aria-label="Home page">
                 <i class="fa fa-home me-2" aria-hidden="true"></i>Home
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/about']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" aria-label="About our company">
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" (click)="closeMobileMenu()" aria-label="About our company">
                 <i class="fa fa-building me-2" aria-hidden="true"></i>Our Company
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/vision']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" aria-label="Our vision and mission">
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link" (click)="closeMobileMenu()" aria-label="Our vision and mission">
                 <i class="fa fa-eye me-2" aria-hidden="true"></i>Vision & Mission
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link" aria-label="Pricing information">
+              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link" (click)="closeMobileMenu()" aria-label="Pricing information">
                 <i class="fa fa-tags me-2" aria-hidden="true"></i>Pricing
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link" aria-label="Contact us">
+              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link" (click)="closeMobileMenu()" aria-label="Contact us">
                 <i class="fa fa-envelope me-2" aria-hidden="true"></i>Contact
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link" aria-label="Why choose us">
+              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link" (click)="closeMobileMenu()" aria-label="Why choose us">
                 <i class="fa fa-star me-2" aria-hidden="true"></i>Why We
               </a>
             </li>
             <li class="nav-item ms-3">
-              <a [routerLink]="['/trial']" routerLinkActive="active" class="btn btn-cta-primary" aria-label="Start free trial">
+              <a [routerLink]="['/trial']" routerLinkActive="active" class="btn btn-cta-primary" (click)="closeMobileMenu()" aria-label="Start free trial">
                 <i class="fa fa-rocket me-2" aria-hidden="true"></i>Start Free Trial
               </a>
             </li>

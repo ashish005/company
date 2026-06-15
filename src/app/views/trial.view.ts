@@ -23,38 +23,20 @@ export class TrialBusinessView implements OnInit {
     customForm: FormGroup;
     submitted: boolean = false;
     businessTypes: Array<any> = [];
+    termsAccepted: boolean = false;
 
     successResp: any;
     lookup: BusinessLookup = new BusinessLookup();
     constructor(private formBuilder: FormBuilder, private businessService: TrialBusinessService) {
       this.customForm = this.formBuilder.group({
-            name: [null, Validators.required],
-            address: [null, Validators.required],
-            // branchCode: [null],
-            // establishedDate: [null, Validators.required],
-
-            // orgBusinessTypeId: [null, Validators.required],
-            // licenseNo: [null, Validators.required],
-            // validFromDate: [null, Validators.required],
-            // validToDate: [null, Validators.required],
             contactPersonEmail: [null, [Validators.required, Validators.email]],
             contactPersonName: [null, Validators.required],
             contactPersonMobile: [null, Validators.required],
-            //userName: [null, Validators.required],
-            //operatedById: [null, Validators.required],
-            //referenceSource: [null],
-            // referenceContact: [null],
-            // referenceMail: [null],
-            //countryId: [null, Validators.required],
             softwareCode: [null, Validators.required],
-            businessTypeCode: [null, Validators.required],
-            //softwareId: [null, Validators.required],
+            businessTypeCode: [null, Validators.required]
         });
     }
 
-    get formCountryId(){ return this.customForm.get('countryId'); }
-    get formOperatedBy() { return this.customForm.get('operatedById'); }
-    get formRefSource() { return this.customForm.get('referenceSource'); }
     get formSoftware() { return <FormControl>this.customForm.get('softwareId'); }
 
     get formSoftwareCode() { return <FormControl>this.customForm.get('softwareCode'); }
@@ -63,6 +45,9 @@ export class TrialBusinessView implements OnInit {
     //get formBusinessType(){ return <FormControl>this.customForm.get('orgBusinessTypeId'); }
 
     ngOnInit(): void {
+      // Scroll to top when page loads
+      window.scrollTo(0, 0);
+
       const formItemChange=([prev, next]: [any, any])=>
       {
         if(prev != next)
@@ -114,13 +99,14 @@ export class TrialBusinessView implements OnInit {
 
     sendTrialEmail() {
         const formData = this.customForm.value;
-        const subject = encodeURIComponent('New Trial Registration - ' + formData.name);
+        const subject = encodeURIComponent('New Trial Registration - ' + formData.contactPersonName);
         const body = encodeURIComponent(
             `TRIAL REGISTRATION DETAILS\n\n` +
             `PERSONAL INFORMATION:\n` +
             `Name: ${formData.contactPersonName}\n` +
             `Email: ${formData.contactPersonEmail}\n` +
-            `Mobile: ${formData.contactPersonMobile}\n` +
+            `Mobile: ${formData.contactPersonMobile}\n\n` +
+            `SOFTWARE SELECTION:\n` +
             `Software: ${formData.softwareCode}\n` +
             `Business Type: ${formData.businessTypeCode}\n\n` +
             `Origin: ${location.host}\n\n` +

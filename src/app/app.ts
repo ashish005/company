@@ -10,9 +10,17 @@ import {FormsModule} from '@angular/forms';
 })
 export class App {
   protected readonly title = signal('company');
-  protected readonly isMobileMenuOpen = signal(false);
+  private readonly mobileMenuOpen = signal(false);
+
+  get isMobileMenuOpen(): boolean {
+    return this.mobileMenuOpen();
+  }
 
   toggleMobileMenu() {
-    this.isMobileMenuOpen.update(open => !open);
+    this.mobileMenuOpen.update(open => !open);
+  }
+
+  closeMobileMenu() {
+    this.mobileMenuOpen.set(false);
   }
 }
