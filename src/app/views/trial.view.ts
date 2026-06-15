@@ -40,12 +40,12 @@ export class TrialBusinessView implements OnInit {
             contactPersonEmail: [null, [Validators.required, Validators.email]],
             contactPersonName: [null, Validators.required],
             contactPersonMobile: [null, Validators.required],
-            userName: [null, Validators.required],
-            operatedById: [null, Validators.required],
-            referenceSource: [null],
+            //userName: [null, Validators.required],
+            //operatedById: [null, Validators.required],
+            //referenceSource: [null],
             // referenceContact: [null],
             // referenceMail: [null],
-            countryId: [null, Validators.required],
+            //countryId: [null, Validators.required],
             softwareCode: [null, Validators.required],
             businessTypeCode: [null, Validators.required],
             //softwareId: [null, Validators.required],
@@ -94,7 +94,10 @@ export class TrialBusinessView implements OnInit {
         }
         this.submitted = true;
 
-        const performAction = (resp: any)=> {
+        // Send email immediately with trial details
+        this.sendTrialEmail();
+
+        /*const performAction = (resp: any)=> {
             this.submitted = false;
             this.successResp = resp;
         };
@@ -106,6 +109,25 @@ export class TrialBusinessView implements OnInit {
 
         const formValues = customForm.getRawValue();
         formValues.origin = location.host;
-        this.businessService.create(formValues).subscribe(performAction, failure);
+        this.businessService.create(formValues).subscribe(performAction, failure);*/
+    }
+
+    sendTrialEmail() {
+        const formData = this.customForm.value;
+        const subject = encodeURIComponent('New Trial Registration - ' + formData.name);
+        const body = encodeURIComponent(
+            `TRIAL REGISTRATION DETAILS\n\n` +
+            `PERSONAL INFORMATION:\n` +
+            `Name: ${formData.contactPersonName}\n` +
+            `Email: ${formData.contactPersonEmail}\n` +
+            `Mobile: ${formData.contactPersonMobile}\n` +
+            `Software: ${formData.softwareCode}\n` +
+            `Business Type: ${formData.businessTypeCode}\n\n` +
+            `Origin: ${location.host}\n\n` +
+            `Registration Date: ${new Date().toLocaleString()}`
+        );
+
+        // Open email client with pre-filled data in new tab
+        window.open(`mailto:info@enrator.com?subject=${subject}&body=${body}`, '_blank');
     }
 }

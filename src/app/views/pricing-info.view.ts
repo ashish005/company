@@ -24,7 +24,7 @@ export class PricingInfoView implements OnInit {
 
     showBySoftware(software: any){
         this.activeSoftware = software;
-        this.fetchSectorDetails();
+        //this.fetchSectorDetails();
     }
 
     fetchSectorDetails(){
