@@ -1,20 +1,20 @@
 <div class="about-page">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" style="background: #1a365d; min-height: 70vh; display: flex; align-items: center;">
         <div class="container">
-            <div class="row align-items-center min-vh-100">
+            <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <div class="hero-content">
-                        <div class="badge">
+                    <div class="hero-content text-white">
+                        <div class="badge mb-4 px-4 py-2 rounded-pill" style="background: #c9a227; color: white;">
                             <i class="fa fa-building me-2"></i>About EnRator
                         </div>
-                        <h1 class="hero-title">Who We Are</h1>
-                        <p class="hero-subtitle">EnRator is a dynamic software startup and consulting firm delivering cutting-edge digital solutions, strategic technology partnerships, and expert IT consulting services to transform businesses worldwide.</p>
+                        <h1 class="hero-title fw-bold mb-4" style="font-size: 3rem;">Who We Are</h1>
+                        <p class="hero-subtitle mb-5 fs-5" style="opacity: 0.9;">EnRator is a dynamic software startup and consulting firm delivering cutting-edge digital solutions, strategic technology partnerships, and expert IT consulting services to transform businesses worldwide.</p>
                         <div class="hero-actions">
-                            <button class="btn btn-warning" [routerLink]="['/contact']">
+                            <button class="btn rounded-pill px-5 py-3 fw-bold me-3" [routerLink]="['/contact']" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                                 <i class="fa fa-envelope me-2"></i>Contact Us
                             </button>
-                            <button class="btn btn-outline-light" [routerLink]="['/trial']">
+                            <button class="btn rounded-pill px-5 py-3 fw-bold" [routerLink]="['/trial']" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);">
                                 <i class="fa fa-rocket me-2"></i>Start Free Trial
                             </button>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="hero-visual">
                         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
                              alt="Software Development Team"
-                             class="img-fluid">
+                             class="img-fluid rounded-4 shadow-lg" style="box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                     </div>
                 </div>
             </div>
@@ -32,39 +32,39 @@
     </section>
 
     <!-- Company Overview -->
-    <section class="section-padding">
+    <section class="section-padding py-5" style="background: #f8f9fa;">
         <div class="container">
             <div class="text-center mb-5">
-                <div class="badge">
+                <div class="badge mb-3 px-4 py-2 rounded-pill" style="background: #1a365d; color: white;">
                     <i class="fa fa-info-circle me-2"></i>Company Overview
                 </div>
-                <h2 class="display-4 fw-bold mb-3 text-gradient">EnRator</h2>
+                <h2 class="display-4 fw-bold mb-3" style="color: #1a365d;">EnRator</h2>
                 <p class="lead text-muted">Software Startup & Consulting Excellence</p>
             </div>
 
             <div class="row g-4 mb-5">
                 <div class="col-lg-6">
-                    <div class="feature-card">
+                    <div class="feature-card bg-white rounded-4 shadow-sm p-4" style="border-top: 3px solid #1a365d;">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
                              alt="Client-Centric Approach"
-                             class="img-fluid rounded-3 mb-4" style="height: 300px; object-fit: cover; width: 100%;">
-                        <div class="feature-icon mb-3 bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block">
-                            <i class="fa fa-users fa-2x text-primary"></i>
+                             class="img-fluid rounded-3 mb-4" style="height: 200px; object-fit: cover; width: 100%;">
+                        <div class="feature-icon mb-3 rounded-circle p-3 d-inline-block" style="background: #1a365d; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-users fa-lg text-white"></i>
                         </div>
-                        <h3 class="feature-title fw-bold mb-3">Client-Centric Approach</h3>
+                        <h3 class="feature-title fw-bold mb-3" style="color: #1a365d;">Client-Centric Approach</h3>
                         <p class="feature-description text-muted">Dedicated to partnering with businesses of all sizes through trust, transparent communication, and collaborative development.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="feature-card">
+                    <div class="feature-card bg-white rounded-4 shadow-sm p-4" style="border-top: 3px solid #c9a227;">
                         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
                              alt="Innovation Focus"
-                             class="img-fluid rounded-3 mb-4" style="height: 300px; object-fit: cover; width: 100%;">
-                        <div class="feature-icon mb-3 bg-success bg-opacity-10 rounded-circle p-3 d-inline-block">
-                            <i class="fa fa-lightbulb fa-2x text-success"></i>
+                             class="img-fluid rounded-3 mb-4" style="height: 200px; object-fit: cover; width: 100%;">
+                        <div class="feature-icon mb-3 rounded-circle p-3 d-inline-block" style="background: #c9a227; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-lightbulb fa-lg text-white"></i>
                         </div>
-                        <h3 class="feature-title fw-bold mb-3">Innovation Focus</h3>
-                        <p class="feature-description text-muted">Leveraging cutting-edge technologies including AI, cloud computing, and modern frameworks to deliver transformative software solutions.</p>
+                        <h3 class="feature-title fw-bold mb-3" style="color: #1a365d;">Innovation Focus</h3>
+                        <p class="feature-description text-muted">Committed to staying at the forefront of technology trends and delivering innovative solutions that drive business growth.</p>
                     </div>
                 </div>
             </div>

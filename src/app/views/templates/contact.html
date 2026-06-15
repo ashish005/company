@@ -1,20 +1,20 @@
 <div class="contact-page">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" style="background: #1a365d; min-height: 70vh; display: flex; align-items: center;">
         <div class="container">
-            <div class="row align-items-center py-5">
+            <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <div class="hero-content">
-                        <div class="badge">
+                    <div class="hero-content text-white">
+                        <div class="badge mb-4 px-4 py-2 rounded-pill" style="background: #c9a227; color: white;">
                             <i class="fa fa-envelope me-2"></i>Contact Us
                         </div>
-                        <h1 class="hero-title">Contact Our Team</h1>
-                        <p class="hero-subtitle">We welcome the opportunity to discuss how our software development and consulting expertise can support your business objectives. Reach out to our team for personalized consultation and technical guidance.</p>
+                        <h1 class="hero-title fw-bold mb-4" style="font-size: 3rem;">Contact Our Team</h1>
+                        <p class="hero-subtitle mb-5 fs-5" style="opacity: 0.9;">We welcome the opportunity to discuss how our software development and consulting expertise can support your business objectives. Reach out to our team for personalized consultation and technical guidance.</p>
                         <div class="hero-actions">
-                            <button class="btn btn-warning" (click)="sendDirectEmail()">
+                            <button class="btn rounded-pill px-5 py-3 fw-bold me-3" (click)="sendDirectEmail()" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                                 <i class="fa fa-envelope me-2"></i>Send Message
                             </button>
-                            <button class="btn btn-outline-light" (click)="scheduleCall()">
+                            <button class="btn rounded-pill px-5 py-3 fw-bold" (click)="scheduleCall()" style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3);">
                                 <i class="fa fa-phone me-2"></i>Call Now
                             </button>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="hero-visual">
                         <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1200&q=80"
                              alt="Contact Us"
-                             class="img-fluid rounded-4 shadow-lg">
+                             class="img-fluid rounded-4 shadow-lg" style="box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                     </div>
                 </div>
             </div>
@@ -32,59 +32,59 @@
     </section>
 
     <!-- Contact Information Section -->
-    <section class="section-padding py-5 bg-light">
+    <section class="section-padding py-5" style="background: #f8f9fa;">
         <div class="container">
             <div class="text-center mb-5">
-                <div class="badge mb-3">
+                <div class="badge mb-3 px-4 py-2 rounded-pill" style="background: #1a365d; color: white;">
                     <i class="fa fa-phone me-2"></i>Reach Out Anytime
                 </div>
-                <h2 class="display-4 fw-bold mb-3 text-gradient">Connect With Our Experts</h2>
+                <h2 class="display-4 fw-bold mb-3" style="color: #1a365d;">Connect With Our Experts</h2>
                 <p class="lead text-muted mb-4">Multiple channels available for seamless communication with our dedicated team</p>
             </div>
 
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center h-100 p-5 bg-white rounded-4 shadow-lg hover:shadow-xl transition-all border-0">
+                    <div class="feature-card text-center h-100 p-5 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0" style="border-top: 3px solid #1a365d;">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80"
                              alt="Email Us"
-                             class="img-fluid rounded-3 mb-4" style="height: 200px; object-fit: cover; width: 100%;">
-                        <div class="feature-icon mx-auto mb-4 bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block">
-                            <i class="fa fa-envelope fa-2x text-primary"></i>
+                             class="img-fluid rounded-3 mb-4" style="height: 150px; object-fit: cover; width: 100%;">
+                        <div class="feature-icon mx-auto mb-4 rounded-circle p-3 d-inline-block" style="background: #1a365d; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-envelope fa-lg text-white"></i>
                         </div>
-                        <h4 class="feature-title fw-bold mb-3">Email Us</h4>
+                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d;">Email Us</h4>
                         <p class="feature-description text-muted mb-4">Send us a detailed inquiry and our team will respond within one business day with tailored solutions.</p>
-                        <button class="btn btn-primary btn-lg rounded-pill" (click)="sendDirectEmail()">
+                        <button class="btn btn-lg rounded-pill fw-bold" (click)="sendDirectEmail()" style="background: #1a365d; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                             <i class="fa fa-arrow-right me-2"></i>Send Email
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center h-100 p-5 bg-white rounded-4 shadow-lg hover:shadow-xl transition-all border-0">
+                    <div class="feature-card text-center h-100 p-5 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0" style="border-top: 3px solid #c9a227;">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
                              alt="Schedule Call"
-                             class="img-fluid rounded-3 mb-4" style="height: 200px; object-fit: cover; width: 100%;">
-                        <div class="feature-icon mx-auto mb-4 bg-success bg-opacity-10 rounded-circle p-3 d-inline-block">
-                            <i class="fa fa-calendar fa-2x text-success"></i>
+                             class="img-fluid rounded-3 mb-4" style="height: 150px; object-fit: cover; width: 100%;">
+                        <div class="feature-icon mx-auto mb-4 rounded-circle p-3 d-inline-block" style="background: #c9a227; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-phone fa-lg text-white"></i>
                         </div>
-                        <h4 class="feature-title fw-bold mb-3">Schedule Call</h4>
-                        <p class="feature-description text-muted mb-4">Schedule a consultation call with our experts at your convenience using our calendar system.</p>
-                        <button class="btn btn-success btn-lg rounded-pill" (click)="scheduleCall()">
-                            <i class="fa fa-calendar me-2"></i>Schedule Now
+                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d;">Schedule Call</h4>
+                        <p class="feature-description text-muted mb-4">Book a consultation call with our experts to discuss your specific requirements and get personalized recommendations.</p>
+                        <button class="btn btn-lg rounded-pill fw-bold" (click)="scheduleCall()" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                            <i class="fa fa-calendar me-2"></i>Schedule Call
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center h-100 p-5 bg-white rounded-4 shadow-lg hover:shadow-xl transition-all border-0">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
-                             alt="Visit Us"
-                             class="img-fluid rounded-3 mb-4" style="height: 200px; object-fit: cover; width: 100%;">
-                        <div class="feature-icon mx-auto mb-4 bg-warning bg-opacity-10 rounded-circle p-3 d-inline-block">
-                            <i class="fa fa-map-marker-alt fa-2x text-warning"></i>
+                    <div class="feature-card text-center h-100 p-5 bg-white rounded-4 shadow-sm hover:shadow-lg transition-all border-0" style="border-top: 3px solid #64748b;">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
+                             alt="Visit Office"
+                             class="img-fluid rounded-3 mb-4" style="height: 150px; object-fit: cover; width: 100%;">
+                        <div class="feature-icon mx-auto mb-4 rounded-circle p-3 d-inline-block" style="background: #64748b; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-map-marker-alt fa-lg text-white"></i>
                         </div>
-                        <h4 class="feature-title fw-bold mb-3">Visit Us</h4>
-                        <p class="feature-description text-muted mb-4">Schedule an in-person consultation at our headquarters to discuss your strategic initiatives.</p>
-                        <button class="btn btn-warning btn-lg rounded-pill" (click)="getDirections()">
-                            <i class="fa fa-map me-2"></i>Get Directions
+                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d;">Visit Office</h4>
+                        <p class="feature-description text-muted mb-4">Stop by our office for a face-to-face meeting with our team. We're located in the heart of New Delhi, India.</p>
+                        <button class="btn btn-lg rounded-pill fw-bold" style="background: #64748b; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                            <i class="fa fa-location-arrow me-2"></i>Get Directions
                         </button>
                     </div>
                 </div>
