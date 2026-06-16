@@ -6,8 +6,8 @@
         <!-- Brand -->
         <a [routerLink]="['/']" class="navbar-brand d-flex align-items-center">
           <div class="brand-logo">
-            <img src="logo.svg" alt="EnRator Logo" class="brand-image me-2" style="height: 50px; width: 150px;">
-            <span class="brand-text hide text-white fw-bold">EnRator</span>
+            <img src="logo.svg" alt="EnRator Logo" class="brand-image me-2" style="height: 45px; width: auto;">
+            <!-- <span class="brand-text text-white fw-bold" style="font-size: 1.5rem; letter-spacing: 0.5px;">EnRator</span> -->
           </div>
         </a>
 
@@ -18,38 +18,38 @@
         </button>
 
         <!-- Navigation -->
-        <div class="navbar-collapse collapse" [class.show]="isMobileMenuOpen" id="navbarNav" style="background: #1a365d; margin-top: 1rem; padding: 1rem; border-radius: 8px;">
+        <div class="navbar-collapse collapse" [class.show]="isMobileMenuOpen" id="navbarNav" style="background: #1a365d; border-radius: 8px;">
           <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item">
               <a [routerLink]="['/home']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Home page" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Home page" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 0.25px;">
                 Home
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/about']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="About our company" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="About our company" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 0.25px;">
                 Our Company
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/vision']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Our vision and mission" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Our vision and mission" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 0.25px;">
                 Vision & Mission
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Pricing information" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Pricing information" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 0.25px;">
                 Pricing
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Contact us" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Contact us" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 0.25px;">
                 Contact
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Why choose us" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Why choose us" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 0.25px;">
                 Why We
               </a>
             </li>
@@ -80,25 +80,17 @@
           <div class="footer-section">
             <h5 class="fw-bold mb-3" style="color: #c9a227;">EnRator</h5>
             <p class="mb-3" style="color: rgba(255,255,255,0.7);">Innovative software startup and consulting firm delivering cutting-edge digital solutions, strategic technology partnerships, and expert IT consulting services to transform businesses worldwide.</p>
-            <div class="social-links">
-              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">Facebook</a>
-              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">Twitter</a>
-              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">LinkedIn</a>
-              <a href="#" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">Instagram</a>
-            </div>
           </div>
         </div>
-
         <!-- Quick Links -->
         <div class="col-lg-2 col-md-6 mb-4">
           <div class="footer-section">
-            <h5 class="fw-bold mb-3" style="color: #c9a227;">Quick Links</h5>
+            <h5 class="fw-bold mb-3" style="color: #c9a227; font-size: 1.1rem; letter-spacing: 0.25px;">Quick Links</h5>
             <ul style="list-style: none; padding: 0;">
               <li class="mb-2"><a [routerLink]="['/home']" aria-label="Navigate to home page" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Home</a></li>
               <li class="mb-2"><a [routerLink]="['/about']" aria-label="Navigate to about us page" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">About Us</a></li>
               <li class="mb-2"><a [routerLink]="['/vision']" aria-label="Navigate to vision and mission page" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Vision & Mission</a></li>
               <li class="mb-2"><a [routerLink]="['/whywe']" aria-label="Navigate to why choose us page" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Why Choose Us</a></li>
-              <li class="mb-2"><a [routerLink]="['/pricing-info']" aria-label="Navigate to pricing information page" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Pricing</a></li>
             </ul>
           </div>
         </div>
@@ -106,7 +98,7 @@
         <!-- Industries Served -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="footer-section">
-            <h5 class="fw-bold mb-3" style="color: #c9a227;">Services</h5>
+            <h5 class="fw-bold mb-3" style="color: #c9a227; font-size: 1.1rem; letter-spacing: 0.25px;">Services</h5>
             <ul style="list-style: none; padding: 0;">
               <li class="mb-2"><a href="#" aria-label="Software Development services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Software Development</a></li>
               <li class="mb-2"><a href="#" aria-label="IT Consulting services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">IT Consulting</a></li>
@@ -119,7 +111,7 @@
         <!-- Contact Info -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="footer-section">
-            <h5 class="fw-bold mb-3" style="color: #c9a227;">Contact Info</h5>
+            <h5 class="fw-bold mb-3" style="color: #c9a227; font-size: 1.1rem; letter-spacing: 0.25px;">Contact Info</h5>
             <ul style="list-style: none; padding: 0;">
               <li class="mb-2"><a href="mailto:info@enrator.com" aria-label="Send email to info@enrator.com" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">info@enrator.com</a></li>
               <li class="mb-2">New Delhi, India</li>

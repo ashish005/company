@@ -5,11 +5,11 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="hero-content text-white">
-                        <div class="badge mb-4 px-4 py-2 rounded-pill" style="background: #c9a227; color: white;">
+                        <div class="badge mb-4 px-4 py-2 rounded-pill" style="background: #c9a227; color: white; font-size: 0.875rem; letter-spacing: 0.5px;">
                             Contact Us
                         </div>
-                        <h1 class="hero-title fw-bold mb-4" style="font-size: 3rem;">Contact Our Team</h1>
-                        <p class="hero-subtitle mb-5 fs-5" style="opacity: 0.9;">We welcome the opportunity to discuss how our software development and consulting expertise can support your business objectives. Reach out to our team for personalized consultation and technical guidance.</p>
+                        <h1 class="hero-title fw-bold mb-4" style="font-size: 2.5rem; letter-spacing: -0.5px; line-height: 1.2;">Contact Our Team</h1>
+                        <p class="hero-subtitle mb-5" style="font-size: 1rem; opacity: 0.85; line-height: 1.7; letter-spacing: 0.25px;">We welcome the opportunity to discuss how our software development and consulting expertise can support your business objectives. Reach out to our team for personalized consultation and technical guidance.</p>
                         <div class="hero-actions">
                             <button class="btn rounded-pill px-3 py-1 fw-bold mx-1" (click)="sendDirectEmail()" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                                 Send Message
@@ -38,7 +38,7 @@
                 <div class="badge mb-3 px-4 py-2 rounded-pill" style="background: #1a365d; color: white;">
                     Reach Out Anytime
                 </div>
-                <h2 class="display-4 fw-bold mb-3" style="color: #1a365d;">Connect With Our Experts</h2>
+                <h2 class="fw-bold mb-3" style="color: #1a365d; font-size: 2rem; letter-spacing: -0.25px; line-height: 1.3;">Connect With Our Experts</h2>
                 <p class="lead text-muted mb-4">Multiple channels available for seamless communication with our dedicated team</p>
             </div>
 
@@ -48,7 +48,7 @@
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80"
                              alt="Email Us"
                              class="img-fluid rounded-3 mb-4" style="height: 150px; object-fit: cover; width: 100%;">
-                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d;">Email Us</h4>
+                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d; font-size: 1.25rem; letter-spacing: -0.25px; line-height: 1.3;">Email Us</h4>
                         <p class="feature-description text-muted mb-4">Send us a detailed inquiry and our team will respond within one business day with tailored solutions.</p>
                         <button class="btn rounded-pill px-3 py-1 fw-bold" (click)="sendDirectEmail()" style="background: #1a365d; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                             Send Email
@@ -60,7 +60,7 @@
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
                              alt="Schedule Call"
                              class="img-fluid rounded-3 mb-4" style="height: 150px; object-fit: cover; width: 100%;">
-                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d;">Schedule Call</h4>
+                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d; font-size: 1.25rem; letter-spacing: -0.25px; line-height: 1.3;">Schedule Call</h4>
                         <p class="feature-description text-muted mb-4">Book a consultation call with our experts to discuss your specific requirements and get personalized recommendations.</p>
                         <button class="btn rounded-pill px-3 py-1 fw-bold" (click)="scheduleCall()" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                             Schedule Call
@@ -72,7 +72,7 @@
                         <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
                              alt="Visit Office"
                              class="img-fluid rounded-3 mb-4" style="height: 150px; object-fit: cover; width: 100%;">
-                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d;">Visit Office</h4>
+                        <h4 class="feature-title fw-bold mb-3" style="color: #1a365d; font-size: 1.25rem; letter-spacing: -0.25px; line-height: 1.3;">Visit Office</h4>
                         <p class="feature-description text-muted mb-4">Stop by our office for a face-to-face meeting with our team. We're located in the heart of New Delhi, India.</p>
                         <button class="btn rounded-pill px-3 py-1 fw-bold" style="background: #64748b; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                             Get Directions
@@ -93,7 +93,7 @@
                             <div class="badge mb-3">
                                 <i class="fa fa-envelope me-2"></i>Get in Touch
                             </div>
-                            <h3 class="fw-bold mb-2">Send us a Message</h3>
+                            <h3 class="fw-bold mb-2" style="font-size: 1.5rem; letter-spacing: -0.25px; line-height: 1.3;">Send us a Message</h3>
                             <p class="text-muted">Fill out the form below and we'll get back to you within 24 hours.</p>
                         </div>
                         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
@@ -142,7 +142,7 @@
                             <div class="badge mb-3">
                                 <i class="fa fa-clock me-2"></i>Business Hours
                             </div>
-                            <h3 class="fw-bold mb-4">When We're Available</h3>
+                            <h3 class="fw-bold mb-4" style="font-size: 1.5rem; letter-spacing: -0.25px; line-height: 1.3;">When We're Available</h3>
                             <div class="hours-list">
                                 <div class="hours-item d-flex justify-content-between align-items-center py-3 border-bottom">
                                     <div class="d-flex align-items-center">
@@ -178,14 +178,14 @@
                             <div class="badge mb-3">
                                 <i class="fa fa-map-marker-alt me-2"></i>Our Location
                             </div>
-                            <h3 class="fw-bold mb-3">Office Locations</h3>
+                            <h3 class="fw-bold mb-3" style="font-size: 1.5rem; letter-spacing: -0.25px; line-height: 1.3;">Office Locations</h3>
                             <div class="location-card mb-4 p-4 bg-light rounded-3">
                                 <div class="d-flex align-items-start mb-3">
                                     <div class="location-icon me-3 bg-warning bg-opacity-10 rounded-circle p-2">
                                         <i class="fa fa-building text-warning"></i>
                                     </div>
                                     <div>
-                                        <h5 class="fw-bold mb-2">Headquarters</h5>
+                                        <h5 class="fw-bold mb-2" style="font-size: 1.1rem; letter-spacing: 0.25px;">Headquarters</h5>
                                         <p class="text-muted mb-0">Laxmi Nagar<br>East Delhi, 110092<br>India</p>
                                     </div>
                                 </div>
@@ -223,7 +223,7 @@
                         <div class="faq-icon mb-4 bg-primary bg-opacity-10 rounded-circle p-3 d-inline-block">
                             <i class="fa fa-code fa-2x text-primary"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">What software development services do you offer?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">What software development services do you offer?</h5>
                         <p class="text-muted">We offer comprehensive custom software development, web and mobile applications, cloud solutions, API development, and IT consulting services tailored to your business needs.</p>
                     </div>
                 </div>
@@ -232,7 +232,7 @@
                         <div class="faq-icon mb-4 bg-success bg-opacity-10 rounded-circle p-3 d-inline-block">
                             <i class="fa fa-clock fa-2x text-success"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">How quickly can you start a software project?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">How quickly can you start a software project?</h5>
                         <p class="text-muted">Project timelines vary based on complexity, but we typically begin within 1-2 weeks of project confirmation after requirements gathering.</p>
                     </div>
                 </div>
@@ -241,7 +241,7 @@
                         <div class="faq-icon mb-4 bg-info bg-opacity-10 rounded-circle p-3 d-inline-block">
                             <i class="fa fa-tools fa-2x text-info"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Do you offer ongoing software maintenance and support?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">Do you offer ongoing software maintenance and support?</h5>
                         <p class="text-muted">Yes, we provide 24/7 support, maintenance services, and continuous integration to ensure your software runs smoothly and stays up-to-date.</p>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                         <div class="faq-icon mb-4 bg-warning bg-opacity-10 rounded-circle p-3 d-inline-block">
                             <i class="fa fa-laptop-code fa-2x text-warning"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">What technologies do you specialize in?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">What technologies do you specialize in?</h5>
                         <p class="text-muted">We work with modern technologies including React, Angular, Node.js, Python, cloud platforms (AWS, Azure, GCP), and various databases to build scalable solutions.</p>
                     </div>
                 </div>

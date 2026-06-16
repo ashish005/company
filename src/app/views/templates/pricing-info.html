@@ -5,11 +5,11 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="hero-content text-white">
-                        <div class="badge mb-4 px-4 py-2 rounded-pill" style="background: #c9a227; color: white;">
+                        <div class="badge mb-4 px-4 py-2 rounded-pill" style="background: #c9a227; color: white; font-size: 0.875rem; letter-spacing: 0.5px;">
                             Pricing Plans
                         </div>
-                        <h1 class="hero-title fw-bold mb-4" style="font-size: 3rem;">Select Your Ideal Plan</h1>
-                        <p class="hero-subtitle mb-5 fs-5" style="opacity: 0.9;">Flexible software development and consulting pricing solutions designed to scale with your organization. Begin with a complimentary trial and upgrade as your requirements evolve.</p>
+                        <h1 class="hero-title fw-bold mb-4" style="font-size: 2.5rem; letter-spacing: -0.5px; line-height: 1.2;">Select Your Ideal Plan</h1>
+                        <p class="hero-subtitle mb-5" style="font-size: 1rem; opacity: 0.85; line-height: 1.7; letter-spacing: 0.25px;">Flexible software development and consulting pricing solutions designed to scale with your organization. Begin with a complimentary trial and upgrade as your requirements evolve.</p>
                         <div class="hero-actions">
                             <button class="btn rounded-pill px-3 py-1 fw-bold mx-1" [routerLink]="['/trial']" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                                 Start Free Trial
@@ -56,7 +56,7 @@
     <section class="section-padding">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 text-gradient">Select Your Service Solution</h2>
+                <h2 class="fw-bold mb-3 text-gradient" style="font-size: 2rem; letter-spacing: -0.25px; line-height: 1.3;">Select Your Service Solution</h2>
                 <p class="lead text-muted">Choose the software development service that aligns with your business requirements</p>
             </div>
 
@@ -84,7 +84,7 @@
                     <div class="feature-card">
                         <div class="p-4">
                             <div class="text-center mb-4">
-                                <h3 class="display-6 fw-bold text-gradient">Plan Comparison Overview</h3>
+                                <h3 class="fw-bold text-gradient" style="font-size: 2rem; letter-spacing: -0.25px; line-height: 1.3;">Plan Comparison Overview</h3>
                                 <p class="text-muted">Evaluate features across different licensing tiers</p>
                             </div>
 
@@ -144,7 +144,7 @@
                                         <div class="feature-icon">
                                             <i class="fa fa-clock fa-2x"></i>
                                         </div>
-                                        <h4 class="feature-title">Plan Under Review</h4>
+                                        <h4 class="feature-title" style="font-size: 1.25rem; letter-spacing: -0.25px; line-height: 1.3;">Plan Under Review</h4>
                                         <p class="feature-description">We're currently updating our pricing plans. Please check back soon or contact us for more information.</p>
                                         <button class="btn rounded-pill px-3 py-1 fw-bold" [routerLink]="['/contact']" style="background: #1a365d; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                                             Contact Sales
@@ -163,7 +163,7 @@
     <section class="section-padding bg-light" *ngIf="software.licensingFeatures && software.licensingFeatures.length">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-gradient">Advantages of Our Pricing Model</h2>
+                <h2 class="fw-bold text-gradient" style="font-size: 2rem; letter-spacing: -0.25px; line-height: 1.3;">Advantages of Our Pricing Model</h2>
                 <p class="lead text-muted">Scalable software solutions designed for sustainable business growth</p>
             </div>
 
@@ -173,7 +173,7 @@
                         <div class="feature-icon">
                             <i class="fa fa-dollar-sign fa-2x"></i>
                         </div>
-                        <h4 class="feature-title">Transparent Pricing Structure</h4>
+                        <h4 class="feature-title" style="font-size: 1.25rem; letter-spacing: -0.25px; line-height: 1.3;">Transparent Pricing Structure</h4>
                         <p class="feature-description">Clear, straightforward pricing with no hidden costs or unexpected charges for software development services.</p>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                         <div class="feature-icon icon-success">
                             <i class="fa fa-arrows-alt fa-2x"></i>
                         </div>
-                        <h4 class="feature-title">Scalable Solutions</h4>
+                        <h4 class="feature-title" style="font-size: 1.25rem; letter-spacing: -0.25px; line-height: 1.3;">Scalable Solutions</h4>
                         <p class="feature-description">Begin with essential features and seamlessly expand your software as your organization grows.</p>
                     </div>
                 </div>
@@ -193,7 +193,7 @@
                         <div class="feature-icon icon-accent">
                             <i class="fa fa-headset fa-2x"></i>
                         </div>
-                        <h4 class="feature-title">Dedicated Support</h4>
+                        <h4 class="feature-title" style="font-size: 1.25rem; letter-spacing: -0.25px; line-height: 1.3;">Dedicated Support</h4>
                         <p class="feature-description">Access expert technical assistance whenever needed with our committed development support team.</p>
                     </div>
                 </div>
@@ -205,32 +205,32 @@
     <section class="section-padding">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3 text-gradient">Frequently Asked Questions</h2>
+                <h2 class="fw-bold mb-3 text-gradient" style="font-size: 2rem; letter-spacing: -0.25px; line-height: 1.3;">Frequently Asked Questions</h2>
                 <p class="lead text-muted">Common questions about our software development pricing</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-lg-6">
                     <div class="faq-card">
-                        <h5 class="fw-bold mb-3">Can I change service plans anytime?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">Can I change service plans anytime?</h5>
                         <p class="text-muted">Yes, you can upgrade or downgrade your software development plan at any time. Changes take effect at the next billing cycle.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="faq-card">
-                        <h5 class="fw-bold mb-3">Is there a free trial?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">Is there a free trial?</h5>
                         <p class="text-muted">Yes! All software development plans come with a 14-day free trial. No credit card required to start.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="faq-card">
-                        <h5 class="fw-bold mb-3">What payment methods do you accept?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">What payment methods do you accept?</h5>
                         <p class="text-muted">We accept all major credit cards, PayPal, and bank transfers for enterprise software development contracts.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="faq-card">
-                        <h5 class="fw-bold mb-3">Do you offer discounts?</h5>
+                        <h5 class="fw-bold mb-3" style="font-size: 1.1rem; letter-spacing: 0.25px;">Do you offer discounts?</h5>
                         <p class="text-muted">Yes, we offer discounts for annual billing, long-term contracts, and non-profit organizations.</p>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
     <section class="cta-section bg-primary text-white py-5">
         <div class="container">
             <div class="text-center">
-                <h2 class="display-5 fw-bold mb-4">Ready to Get Started?</h2>
+                <h2 class="fw-bold mb-4" style="font-size: 2rem; letter-spacing: -0.25px; line-height: 1.3;">Ready to Get Started?</h2>
                 <p class="lead mb-4">Choose the perfect software development plan for your business needs</p>
                 <div class="cta-buttons d-flex justify-content-center flex-wrap">
                     <button class="btn rounded-pill px-3 py-1 fw-bold mx-1" [routerLink]="['/trial']" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
