@@ -13,49 +13,49 @@
 
         <!-- Mobile Toggle -->
         <button class="navbar-toggler" type="button" (click)="toggleMobileMenu()"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: rgba(255,255,255,0.3);">
-          <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 30 30\'%3e%3cpath stroke=\'rgba%28255, 255, 255, 0.9%29\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3e%3c/svg%3e');"></span>
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white; background: rgba(255,255,255,0.1); padding: 0.5rem 0.75rem;">
+          <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 30 30\'%3e%3cpath stroke=\'white\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3e%3c/svg%3e');"></span>
         </button>
 
         <!-- Navigation -->
-        <div class="navbar-collapse collapse" [class.show]="isMobileMenuOpen" id="navbarNav">
+        <div class="navbar-collapse collapse" [class.show]="isMobileMenuOpen" id="navbarNav" style="background: #1a365d; margin-top: 1rem; padding: 1rem; border-radius: 8px;">
           <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item">
               <a [routerLink]="['/home']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Home page" style="color: rgba(255,255,255,0.9) !important; font-weight: 500; padding: 0.5rem 1rem;">
-                <i class="fa fa-home me-2" aria-hidden="true"></i>Home
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Home page" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                Home
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/about']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="About our company" style="color: rgba(255,255,255,0.9) !important; font-weight: 500; padding: 0.5rem 1rem;">
-                <i class="fa fa-building me-2" aria-hidden="true"></i>Our Company
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="About our company" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                Our Company
               </a>
             </li>
             <li class="nav-item">
               <a [routerLink]="['/vision']" routerLinkActive="active"
-                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Our vision and mission" style="color: rgba(255,255,255,0.9) !important; font-weight: 500; padding: 0.5rem 1rem;">
-                <i class="fa fa-eye me-2" aria-hidden="true"></i>Vision & Mission
+                 [routerLinkActiveOptions]="{ exact: true }" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Our vision and mission" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                Vision & Mission
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Pricing information" style="color: rgba(255,255,255,0.9) !important; font-weight: 500; padding: 0.5rem 1rem;">
-                <i class="fa fa-tags me-2" aria-hidden="true"></i>Pricing
+              <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Pricing information" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                Pricing
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Contact us" style="color: rgba(255,255,255,0.9) !important; font-weight: 500; padding: 0.5rem 1rem;">
-                <i class="fa fa-envelope me-2" aria-hidden="true"></i>Contact
+              <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Contact us" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                Contact
               </a>
             </li>
             <li class="nav-item">
-              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Why choose us" style="color: rgba(255,255,255,0.9) !important; font-weight: 500; padding: 0.5rem 1rem;">
-                <i class="fa fa-star me-2" aria-hidden="true"></i>Why We
+              <a [routerLink]="['/whywe']" routerLinkActive="active" class="nav-link text-white" (click)="closeMobileMenu()" aria-label="Why choose us" style="color: white !important; font-weight: 500; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                Why We
               </a>
             </li>
             <li class="nav-item ms-3">
-              <a [routerLink]="['/trial']" routerLinkActive="active" class="btn rounded-pill px-5 py-2.5 fw-bold" (click)="closeMobileMenu()" aria-label="Start free trial" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                <i class="fa fa-rocket me-2" aria-hidden="true"></i>Start Free Trial
+              <a [routerLink]="['/trial']" routerLinkActive="active" class="btn rounded-pill px-3 py-1 fw-bold mx-1" (click)="closeMobileMenu()" aria-label="Start free trial" style="background: #c9a227; color: white; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                Start Free Trial
               </a>
             </li>
           </ul>
@@ -81,10 +81,10 @@
             <h5 class="fw-bold mb-3" style="color: #c9a227;">EnRator</h5>
             <p class="mb-3" style="color: rgba(255,255,255,0.7);">Innovative software startup and consulting firm delivering cutting-edge digital solutions, strategic technology partnerships, and expert IT consulting services to transform businesses worldwide.</p>
             <div class="social-links">
-              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" style="color: rgba(255,255,255,0.7); transition: color 0.3s;"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">Facebook</a>
+              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">Twitter</a>
+              <a href="#" class="me-3" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">LinkedIn</a>
+              <a href="#" style="color: rgba(255,255,255,0.7); transition: color 0.3s;">Instagram</a>
             </div>
           </div>
         </div>
@@ -121,8 +121,8 @@
           <div class="footer-section">
             <h5 class="fw-bold mb-3" style="color: #c9a227;">Contact Info</h5>
             <ul style="list-style: none; padding: 0;">
-              <li class="mb-2"><i class="fa fa-envelope me-2" aria-hidden="true" style="color: #c9a227;"></i><a href="mailto:info@enrator.com" aria-label="Send email to info@enrator.com" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">info@enrator.com</a></li>
-              <li class="mb-2"><i class="fa fa-map-marker-alt me-2" aria-hidden="true" style="color: #c9a227;"></i> New Delhi, India</li>
+              <li class="mb-2"><a href="mailto:info@enrator.com" aria-label="Send email to info@enrator.com" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">info@enrator.com</a></li>
+              <li class="mb-2">New Delhi, India</li>
             </ul>
           </div>
         </div>
